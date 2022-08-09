@@ -1,7 +1,22 @@
-import React from 'react'
+import React from 'react';
 
-const Follower = () => {
-  return <h2>follower component</h2>
-}
+const Follower = ({
+  id,
+  login,
+  avatar_url,
+  url,
+  followers_url,
+  following_url,
+}) => {
+  return (
+    <article className="card">
+      <img src={avatar_url} alt={login} />
+      <h4>tarasis</h4>
+      <a href={url} className="btn">
+        view profile
+      </a>
+    </article>
+  );
+};
 
-export default Follower
+export default Follower;
