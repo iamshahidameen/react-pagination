@@ -11,7 +11,7 @@ const Follower = ({
   return (
     <article className="card">
       <img src={avatar_url} alt={login} />
-      <h4>tarasis</h4>
+      <h4>{login}</h4>
       <a href={html_url} className="btn">
         view profile
       </a>
