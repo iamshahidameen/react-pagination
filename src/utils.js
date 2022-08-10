@@ -6,8 +6,7 @@ const paginate = (users) => {
     const start = index * itemsPerPage;
     return users.slice(start, start + itemsPerPage);
   });
-
-  console.log(users, 'in paginate', noOfPages, newUsers);
+  return newUsers;
 };
 
 export default paginate;

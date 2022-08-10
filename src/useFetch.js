@@ -9,10 +9,10 @@ export const useFetch = () => {
   const getProducts = async () => {
     const response = await fetch(url);
     const data = await response.json();
-    paginate(data);
-    setData(data);
-
-    console.log(data);
+    // paginate(data);
+    // console.log(paginate(data), 'this is usefetch reurn of paginate');
+    setData(paginate(data));
+    console.log(paginate(data), 'this is paginate');
     setLoading(false);
   };
 
