@@ -43,9 +43,14 @@ function App() {
           })}
         </div>
         <div className="btn-container">
-          <button className="prev-btn" onClick={() => handlePagination('prev')}>
-            prev
-          </button>
+          {loading || (
+            <button
+              className="prev-btn"
+              onClick={() => handlePagination('prev')}
+            >
+              prev
+            </button>
+          )}
 
           {data.map((paginate, index) => {
             return (
@@ -62,9 +67,14 @@ function App() {
             );
           })}
 
-          <button className="next-btn" onClick={() => handlePagination('next')}>
-            next
-          </button>
+          {loading || (
+            <button
+              className="next-btn"
+              onClick={() => handlePagination('next')}
+            >
+              next
+            </button>
+          )}
         </div>
       </section>
     </main>
